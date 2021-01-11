@@ -1,12 +1,14 @@
 {
-    "spells": [
+    "cards": [
         {
             "card1": "Fire ball",
+            "class": "spell",
             "rarity": 5,
             "type": "damage"
         },
         {
-            "card1": "Ice blast",
+            "card2": "Ice blast",
+            "class": "spell",
             "rarity": 3,
             "type": "damage"
         }
