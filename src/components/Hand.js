@@ -14,7 +14,7 @@ class Hand extends Component {
     render() { 
         return (
             <>
-            {this.mapCards()}
+                {this.mapCards()}
             </>
         );
     }

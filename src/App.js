@@ -5,13 +5,14 @@ import Hand from "./components/Hand"
 import data from "./card-data.json";
 
 function App() {
-  return (
-    <div className="App">
-        hi
-        <Piece />
-        <Hand hand={data.cards}/>
-    </div>
-  );
+    const data1 = data.cards
+    return (
+        <div className="App">
+            hi
+            <Piece />
+            <Hand hand={data1}/>
+        </div>
+    );
 }
 
 export default App;

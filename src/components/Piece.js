@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
-import { Card, Icon } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
 
 class Piece extends Component {
     state = {
 
     }
 
-    render() { 
-        return (
-            <>
-                  <Card>
+    componentDidMount() {
+        console.log(this.props.cardData)
+    }
+
+    CardInfo = () => {
+        console.log(this.props.cardData)
+        if (typeof this.props.cardData !== "undefined") {
+            return (
+                <Card>
                     <Card.Content>
-                    <Card.Header>Matthew</Card.Header>
+                    <Card.Header>{this.props.cardData.name}</Card.Header>
                     <Card.Meta>
                         <span className='date'>Joined in 2015</span>
                     </Card.Meta>
@@ -20,12 +25,17 @@ class Piece extends Component {
                     </Card.Description>
                     </Card.Content>
                     <Card.Content extra>
-                    <a>
-                        <Icon name='user' />
-                        22 Friends
-                    </a>
+            
                     </Card.Content>
                 </Card>
+            )
+        }
+    }
+
+    render() { 
+        return (
+            <>
+                {this.CardInfo()}
             </>
         );
     }
