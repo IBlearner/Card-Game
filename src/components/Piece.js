@@ -1,32 +1,31 @@
 import React, { Component } from 'react';
-import { Card } from 'semantic-ui-react'
+import { Card, Button } from 'semantic-ui-react'
 
 class Piece extends Component {
     state = {
 
     }
 
-    componentDidMount() {
-        console.log(this.props.cardData)
-    }
-
     CardInfo = () => {
         console.log(this.props.cardData)
-        if (typeof this.props.cardData !== "undefined") {
+        const { cardData } = this.props
+        if (typeof cardData !== "undefined") {
             return (
                 <Card>
                     <Card.Content>
-                    <Card.Header>{this.props.cardData.name}</Card.Header>
+                    <Card.Header>
+                        {cardData.name}
+                    </Card.Header>
                     <Card.Meta>
                         <span className='date'>Joined in 2015</span>
                     </Card.Meta>
                     <Card.Description>
-                        Matthew is a musician living in Nashville.
+                        {cardData.description}
                     </Card.Description>
                     </Card.Content>
-                    <Card.Content extra>
-            
-                    </Card.Content>
+                    <Button>
+                        Play
+                    </Button>
                 </Card>
             )
         }

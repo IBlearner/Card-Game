@@ -5,8 +5,8 @@ class Hand extends Component {
     state = {  }
 
     mapCards = () => {
-        const mappedHand = this.props.hand.map(single => {
-            return <Piece cardData={single}/>
+        const mappedHand = this.props.hand.map((single, key) => {
+            return <Piece key={key} cardData={single}/>
         })
         return mappedHand
     }

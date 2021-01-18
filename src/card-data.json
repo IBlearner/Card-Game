@@ -4,13 +4,15 @@
             "name": "Fire ball",
             "class": "spell",
             "rarity": 5,
-            "type": "damage"
+            "type": "damage",
+            "description": "Deal 5 damage to anything"
         },
         {
             "name": "Ice blast",
             "class": "spell",
             "rarity": 3,
-            "type": "damage"
+            "type": "damage",
+            "description": "Deal 3 damage to a monster and freeze it"
         }
     ]
 }
